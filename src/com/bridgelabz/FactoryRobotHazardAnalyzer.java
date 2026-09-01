@@ -1,9 +1,9 @@
 package com.bridgelabz;
 /*
- * This program accepts robot hazard inputs from the user and validates
- * them inside the calculateHazardRisk() method. Invalid inputs are handled
- * using a custom RobotSafetyException. The exception is caught in the
- * main() method and its message is displayed to the user.
+ * This program accepts robot hazard inputs from the user, validates them,
+ * maps the machinery state to its corresponding risk factor, calculates
+ * the hazard risk score, and handles invalid scenarios using the custom
+ * RobotSafetyException.
  */
 
 import java.util.Scanner;
