@@ -6,3 +6,8 @@ The Factory Robot Hazard Analyzer System evaluates the hazard risk of a factory 
 ### Description
 Displays a static message indicating the purpose of the system. When the program is executed, it prints "Factory Robot Hazard Analyzer" to the console.
 
+## Use Case 2: Accept Robot Hazard Inputs
+
+### Description
+Accepts the required robot hazard inputs from the user using Scanner. The user enters the arm precision, worker density, and machinery state, and the program displays the entered values without performing any validation.
+
