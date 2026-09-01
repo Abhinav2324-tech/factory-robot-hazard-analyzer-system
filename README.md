@@ -35,3 +35,8 @@ Introduces a custom `RobotSafetyException` to handle invalid robot hazard inputs
 
 ### Description
 Implements structured machinery state risk mapping by assigning a specific risk factor to each supported machinery state. The system supports Worn, Faulty, and Critical states and throws a RobotSafetyException when an unsupported machinery state is entered.
+
+## Use Case 8: Fully Modular and OOPS-Compliant Hazard Analyzer
+
+### Description
+Refactors the Factory Robot Hazard Analyzer into a fully modular OOP-based design. The main class handles user input and output, while the RobotHazardAuditor class handles validation, machinery state risk mapping, and hazard risk calculation. Invalid inputs are handled using the custom RobotSafetyException.
