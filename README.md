@@ -25,3 +25,8 @@ Validates the arm precision, worker density, and machinery state using condition
 
 ### Description
 Refactors the validation and hazard risk calculation logic into a separate `calculateHazardRisk()` method. The method accepts arm precision, worker density, and machinery state as parameters, validates the inputs, and returns the calculated hazard risk score while keeping the `main()` method minimal.
+
+## Use Case 6: Introduce Custom Exception - RobotSafetyException
+
+### Description
+Introduces a custom `RobotSafetyException` to handle invalid robot hazard inputs. The `calculateHazardRisk()` method throws the custom exception when an invalid input is detected, while the `main()` method uses a try-catch block to handle the exception and display the appropriate error message.
