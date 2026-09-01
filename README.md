@@ -16,3 +16,7 @@ Accepts the required robot hazard inputs from the user using Scanner. The user e
 ### Description
 Calculates and displays the robot hazard risk score using the arm precision, worker density, and machinery state provided by the user. The inputs are assumed to be valid and no validation is performed at this stage.
 
+## Use Case 4: Introduce Validation Using Conditional Logic
+
+### Description
+Validates the arm precision, worker density, and machinery state using conditional statements. If any input is invalid, the program displays an appropriate error message. If all inputs are valid, the hazard risk score is calculated and displayed.
