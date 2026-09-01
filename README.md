@@ -30,3 +30,8 @@ Refactors the validation and hazard risk calculation logic into a separate `calc
 
 ### Description
 Introduces a custom `RobotSafetyException` to handle invalid robot hazard inputs. The `calculateHazardRisk()` method throws the custom exception when an invalid input is detected, while the `main()` method uses a try-catch block to handle the exception and display the appropriate error message.
+
+## Use Case 7: Machinery State Risk Mapping
+
+### Description
+Implements structured machinery state risk mapping by assigning a specific risk factor to each supported machinery state. The system supports Worn, Faulty, and Critical states and throws a RobotSafetyException when an unsupported machinery state is entered.
