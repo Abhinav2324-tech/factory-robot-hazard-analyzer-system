@@ -7,34 +7,46 @@ package com.bridgelabz;
  */
 
 import java.util.Scanner;
-public class FactoryRobotHazardAnalyzer {
+ public class FactoryRobotHazardAnalyzer {
+
     // Method to validate inputs and calculate hazard risk
     public double calculateRisk(double armPrecision, int workerDensity, String machineryState)
-    throws RobotSafetyException{
+    throws RobotSafetyException {
 
-        if(armPrecision<0.0 || armPrecision>1.0){ // Validate arm precision
-           throw new RobotSafetyException("Error: Arm precision must be 0.0-1.0");
+        if (armPrecision < 0.0 || armPrecision > 1.0) { // Validate arm precision
+            throw new RobotSafetyException("Error: Arm precision must be 0.0-1.0");
         }
-        if(workerDensity<1 || workerDensity>20){ // Validate worker density
+        if (workerDensity < 1 || workerDensity > 20) { // Validate worker density
             throw new RobotSafetyException("Error: Worker density must be 1-20");
         }
-        if(!machineryState.equals("Worn")
+        if (!machineryState.equals("Worn")
                 && (!machineryState.equals("Faulty"))
-                && (!machineryState.equals("Critical"))){ // Validate machinery state
+                && (!machineryState.equals("Critical"))) { // Validate machinery state
             throw new RobotSafetyException("Error: Unsupported machinery state");
         }
-    double machineRiskFactor=0.0;
+        // Get machinery risk factor
+        double machineRiskFactor = getMachineRiskFactor(machineryState);
+        // Calculate and return hazard risk score
+        return ((1.0 - armPrecision) * 15.0)
+                + (workerDensity * machineRiskFactor);
+    }
+
+     // Method to map machinery state to risk factor
+    public double getMachineRiskFactor(String machineryState)
+            throws RobotSafetyException {
+
 
         //Determining the machine risk factor based on machinery state.
         if (machineryState.equals("Worn")) {
-            machineRiskFactor = 1.3;
+            return 1.3;
         } else if (machineryState.equals("Faulty")) {
-            machineRiskFactor = 2.0;
+            return 2.0;
         } else if (machineryState.equals("Critical")) {
-            machineRiskFactor = 3.0;
+            return 3.0;
+        } else {
+            throw new RobotSafetyException("Error: Unsupported machinery state");
         }
-        return ((1.0 - armPrecision) * 15.0)
-                + (workerDensity * machineRiskFactor); //Hazard risk calculation formula
+         //Hazard risk calculation formula
     }
 
     public static void main(String[] args) {
