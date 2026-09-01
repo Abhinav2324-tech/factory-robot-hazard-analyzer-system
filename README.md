@@ -11,3 +11,8 @@ Displays a static message indicating the purpose of the system. When the program
 ### Description
 Accepts the required robot hazard inputs from the user using Scanner. The user enters the arm precision, worker density, and machinery state, and the program displays the entered values without performing any validation.
 
+## Use Case 3: Calculate Hazard Risk Score
+
+### Description
+Calculates and displays the robot hazard risk score using the arm precision, worker density, and machinery state provided by the user. The inputs are assumed to be valid and no validation is performed at this stage.
+
