@@ -20,3 +20,8 @@ Calculates and displays the robot hazard risk score using the arm precision, wor
 
 ### Description
 Validates the arm precision, worker density, and machinery state using conditional statements. If any input is invalid, the program displays an appropriate error message. If all inputs are valid, the hazard risk score is calculated and displayed.
+
+## Use Case 5: Refactor Validation into a Separate Method
+
+### Description
+Refactors the validation and hazard risk calculation logic into a separate `calculateHazardRisk()` method. The method accepts arm precision, worker density, and machinery state as parameters, validates the inputs, and returns the calculated hazard risk score while keeping the `main()` method minimal.
